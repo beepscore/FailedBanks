@@ -1,0 +1,3 @@
+[submodule "banklist"]
+	path = banklist
+	url = git://github.com/beepscore/banklist.git
