@@ -35,17 +35,17 @@
 		DE4A8D2A1580799600B0E35D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE4A8D2C1580799600B0E35D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE4A8D2E1580799600B0E35D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DE4A8D321580799600B0E35D /* FailedBanks-Info.plist */ = {isa = PBXFileReference; path = "FailedBanks-Info.plist"; sourceTree = "<group>"; };
+		DE4A8D321580799600B0E35D /* FailedBanks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FailedBanks-Info.plist"; sourceTree = "<group>"; };
 		DE4A8D341580799600B0E35D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE4A8D361580799600B0E35D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DE4A8D381580799600B0E35D /* FailedBanks-Prefix.pch */ = {isa = PBXFileReference; path = "FailedBanks-Prefix.pch"; sourceTree = "<group>"; };
-		DE4A8D391580799600B0E35D /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		DE4A8D381580799600B0E35D /* FailedBanks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FailedBanks-Prefix.pch"; sourceTree = "<group>"; };
+		DE4A8D391580799600B0E35D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DE4A8D3A1580799600B0E35D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DE4A8D411580799700B0E35D /* FailedBanksTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FailedBanksTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4A8D421580799700B0E35D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		DE4A8D4A1580799700B0E35D /* FailedBanksTests-Info.plist */ = {isa = PBXFileReference; path = "FailedBanksTests-Info.plist"; sourceTree = "<group>"; };
+		DE4A8D4A1580799700B0E35D /* FailedBanksTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FailedBanksTests-Info.plist"; sourceTree = "<group>"; };
 		DE4A8D4C1580799700B0E35D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DE4A8D4E1580799700B0E35D /* FailedBanksTests.h */ = {isa = PBXFileReference; path = FailedBanksTests.h; sourceTree = "<group>"; };
+		DE4A8D4E1580799700B0E35D /* FailedBanksTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FailedBanksTests.h; sourceTree = "<group>"; };
 		DE4A8D4F1580799700B0E35D /* FailedBanksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FailedBanksTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
