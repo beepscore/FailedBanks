@@ -18,6 +18,7 @@
 		DE4A8D451580799700B0E35D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4A8D2C1580799600B0E35D /* Foundation.framework */; };
 		DE4A8D4D1580799700B0E35D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE4A8D4B1580799700B0E35D /* InfoPlist.strings */; };
 		DE4A8D501580799700B0E35D /* FailedBanksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A8D4F1580799700B0E35D /* FailedBanksTests.m */; };
+		DE6D0FF71580859900FD88A2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6D0FF61580859900FD88A2 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DE4A8D4C1580799700B0E35D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE4A8D4E1580799700B0E35D /* FailedBanksTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FailedBanksTests.h; sourceTree = "<group>"; };
 		DE4A8D4F1580799700B0E35D /* FailedBanksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FailedBanksTests.m; sourceTree = "<group>"; };
+		DE6D0FF61580859900FD88A2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6D0FF71580859900FD88A2 /* libsqlite3.dylib in Frameworks */,
 				DE4A8D2B1580799600B0E35D /* UIKit.framework in Frameworks */,
 				DE4A8D2D1580799600B0E35D /* Foundation.framework in Frameworks */,
 				DE4A8D2F1580799600B0E35D /* CoreGraphics.framework in Frameworks */,
@@ -99,6 +102,7 @@
 				DE4A8D2C1580799600B0E35D /* Foundation.framework */,
 				DE4A8D2E1580799600B0E35D /* CoreGraphics.framework */,
 				DE4A8D421580799700B0E35D /* SenTestingKit.framework */,
+				DE6D0FF61580859900FD88A2 /* libsqlite3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -412,6 +416,7 @@
 				DE4A8D551580799700B0E35D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE4A8D561580799700B0E35D /* Build configuration list for PBXNativeTarget "FailedBanksTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				DE4A8D581580799700B0E35D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
