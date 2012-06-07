@@ -18,6 +18,7 @@
 		DE4A8D451580799700B0E35D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4A8D2C1580799600B0E35D /* Foundation.framework */; };
 		DE4A8D4D1580799700B0E35D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE4A8D4B1580799700B0E35D /* InfoPlist.strings */; };
 		DE4A8D501580799700B0E35D /* FailedBanksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A8D4F1580799700B0E35D /* FailedBanksTests.m */; };
+		DE666F421580923400F76DA1 /* banklist in Resources */ = {isa = PBXBuildFile; fileRef = DE666F411580923400F76DA1 /* banklist */; };
 		DE6D0FF71580859900FD88A2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6D0FF61580859900FD88A2 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		DE4A8D4C1580799700B0E35D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE4A8D4E1580799700B0E35D /* FailedBanksTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FailedBanksTests.h; sourceTree = "<group>"; };
 		DE4A8D4F1580799700B0E35D /* FailedBanksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FailedBanksTests.m; sourceTree = "<group>"; };
+		DE666F411580923400F76DA1 /* banklist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = banklist; sourceTree = "<group>"; };
 		DE6D0FF61580859900FD88A2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 		DE4A8D1B1580799600B0E35D = {
 			isa = PBXGroup;
 			children = (
+				DE666F411580923400F76DA1 /* banklist */,
 				DE4A8D301580799600B0E35D /* FailedBanks */,
 				DE4A8D481580799700B0E35D /* FailedBanksTests */,
 				DE4A8D291580799600B0E35D /* Frameworks */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4A8D351580799600B0E35D /* InfoPlist.strings in Resources */,
+				DE666F421580923400F76DA1 /* banklist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
