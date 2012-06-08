@@ -122,6 +122,7 @@
 		DE4A8D301580799600B0E35D /* FailedBanks */ = {
 			isa = PBXGroup;
 			children = (
+				DE97966A1581DEBB00C54AF1 /* Resources */,
 				DE4A8D391580799600B0E35D /* AppDelegate.h */,
 				DE4A8D3A1580799600B0E35D /* AppDelegate.m */,
 				DE4A8D311580799600B0E35D /* Supporting Files */,
@@ -163,6 +164,13 @@
 				DE4A8D4B1580799700B0E35D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE97966A1581DEBB00C54AF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
