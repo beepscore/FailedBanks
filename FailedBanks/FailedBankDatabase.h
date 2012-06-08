@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <sqlite3.h>
 
-@interface FailedBankDatabase : NSObject
+@interface FailedBankDatabase : NSObject {
+    sqlite3 *_database;
+}
+
+// database is a singleton
+// In this tutorial, the database isn't writable because it's stored in mainBundle instead of documents.
++ (FailedBankDatabase*)database;
+
+- (NSArray *)failedBankInfos;
 
 @end
