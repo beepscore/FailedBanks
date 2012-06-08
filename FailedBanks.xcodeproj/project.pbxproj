@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE2180FA1581C29A002BE9CA /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2180F91581C29A002BE9CA /* FailedBankInfo.m */; };
 		DE4A8D2B1580799600B0E35D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4A8D2A1580799600B0E35D /* UIKit.framework */; };
 		DE4A8D2D1580799600B0E35D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4A8D2C1580799600B0E35D /* Foundation.framework */; };
 		DE4A8D2F1580799600B0E35D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4A8D2E1580799600B0E35D /* CoreGraphics.framework */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE2180F81581C29A002BE9CA /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
+		DE2180F91581C29A002BE9CA /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
 		DE4A8D261580799600B0E35D /* FailedBanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FailedBanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4A8D2A1580799600B0E35D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE4A8D2C1580799600B0E35D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,8 @@
 				DE4A8D391580799600B0E35D /* AppDelegate.h */,
 				DE4A8D3A1580799600B0E35D /* AppDelegate.m */,
 				DE4A8D311580799600B0E35D /* Supporting Files */,
+				DE2180F81581C29A002BE9CA /* FailedBankInfo.h */,
+				DE2180F91581C29A002BE9CA /* FailedBankInfo.m */,
 			);
 			path = FailedBanks;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			files = (
 				DE4A8D371580799600B0E35D /* main.m in Sources */,
 				DE4A8D3B1580799600B0E35D /* AppDelegate.m in Sources */,
+				DE2180FA1581C29A002BE9CA /* FailedBankInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
