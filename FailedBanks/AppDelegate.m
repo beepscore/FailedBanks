@@ -32,11 +32,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     [self.window makeKeyAndVisible];
     
-    NSArray *failedBankInfos = [FailedBankDatabase database].failedBankInfos;
-    for (FailedBankInfo *info in failedBankInfos) {
-        NSLog(@"%d: %@, %@, %@", info.uniqueId, info.name, info.city, info.state);
-    }
-    
     return YES;
 }
 

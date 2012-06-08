@@ -54,11 +54,15 @@ static FailedBankDatabase *_database;
             NSString *name = [[NSString alloc] initWithUTF8String:nameChars];
             NSString *city = [[NSString alloc] initWithUTF8String:cityChars];
             NSString *state = [[NSString alloc] initWithUTF8String:stateChars];
-            FailedBankInfo *info = [[FailedBankInfo alloc] 
+            FailedBankInfo *failedBankInfo = [[FailedBankInfo alloc] 
                                     initWithUniqueId:uniqueId name:name city:city state:state];                        
-            [retval addObject:info];
+            [retval addObject:failedBankInfo];
         }
         sqlite3_finalize(statement);
+    }
+    
+    for (FailedBankInfo *info in retval) {
+        NSLog(@"%d: %@, %@, %@", info.uniqueId, info.name, info.city, info.state);
     }
     return retval;
 }
