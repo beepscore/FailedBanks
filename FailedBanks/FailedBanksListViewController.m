@@ -7,12 +7,16 @@
 //
 
 #import "FailedBanksListViewController.h"
+#import "FailedBankDatabase.h"
+#import "FailedBankInfo.h"
 
 @interface FailedBanksListViewController ()
 
 @end
 
 @implementation FailedBanksListViewController
+
+@synthesize failedBankInfos = _failedBankInfos;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -23,16 +27,13 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.failedBankInfos = [FailedBankDatabase database].failedBankInfos;
+    self.title = @"Failed Banks";
 }
+
 
 - (void)viewDidUnload
 {
@@ -40,6 +41,11 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
+
+- (void)dealloc {
+    self.failedBankInfos = nil;
+}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -50,24 +56,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [_failedBankInfos count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+- (UITableViewCell *)tableView:(UITableView *)tableView 
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // Configure the cell...
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = 
+    [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
+                                       reuseIdentifier:CellIdentifier];
+    }
+    
+    // Set up the cell...
+    FailedBankInfo *info = [_failedBankInfos objectAtIndex:indexPath.row];
+    cell.textLabel.text = info.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", 
+                                 info.city, info.state];
     
     return cell;
 }

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FailedBanksListViewController : UITableViewController
+@interface FailedBanksListViewController : UITableViewController {
+    NSArray *_failedBankInfos;
+}
+
+@property (nonatomic, retain) NSArray *failedBankInfos;
 
 @end
