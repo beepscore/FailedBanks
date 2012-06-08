@@ -7,17 +7,26 @@
 //
 
 #import "AppDelegate.h"
+#import "FailedBankDatabase.h"
+#import "FailedBankInfo.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application 
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    NSArray *failedBankInfos = [FailedBankDatabase database].failedBankInfos;
+    for (FailedBankInfo *info in failedBankInfos) {
+        NSLog(@"%d: %@, %@, %@", info.uniqueId, info.name, info.city, info.state);
+    }
+    
     return YES;
 }
 
