@@ -21,6 +21,7 @@
 		DE4A8D501580799700B0E35D /* FailedBanksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4A8D4F1580799700B0E35D /* FailedBanksTests.m */; };
 		DE666F421580923400F76DA1 /* banklist in Resources */ = {isa = PBXBuildFile; fileRef = DE666F411580923400F76DA1 /* banklist */; };
 		DE6D0FF71580859900FD88A2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6D0FF61580859900FD88A2 /* libsqlite3.dylib */; };
+		DED91C2B1581D2DC00590D37 /* FailedBanksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED91C2A1581D2DC00590D37 /* FailedBanksListViewController.m */; };
 		DEE02DA81581C98000198CA3 /* FailedBankDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE02DA71581C98000198CA3 /* FailedBankDatabase.m */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		DE4A8D4F1580799700B0E35D /* FailedBanksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FailedBanksTests.m; sourceTree = "<group>"; };
 		DE666F411580923400F76DA1 /* banklist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = banklist; sourceTree = "<group>"; };
 		DE6D0FF61580859900FD88A2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		DED91C291581D2DC00590D37 /* FailedBanksListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBanksListViewController.h; sourceTree = "<group>"; };
+		DED91C2A1581D2DC00590D37 /* FailedBanksListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBanksListViewController.m; sourceTree = "<group>"; };
 		DEE02DA61581C98000198CA3 /* FailedBankDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankDatabase.h; sourceTree = "<group>"; };
 		DEE02DA71581C98000198CA3 /* FailedBankDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDatabase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +129,8 @@
 				DEE02DA71581C98000198CA3 /* FailedBankDatabase.m */,
 				DE2180F81581C29A002BE9CA /* FailedBankInfo.h */,
 				DE2180F91581C29A002BE9CA /* FailedBankInfo.m */,
+				DED91C291581D2DC00590D37 /* FailedBanksListViewController.h */,
+				DED91C2A1581D2DC00590D37 /* FailedBanksListViewController.m */,
 			);
 			path = FailedBanks;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				DE4A8D3B1580799600B0E35D /* AppDelegate.m in Sources */,
 				DE2180FA1581C29A002BE9CA /* FailedBankInfo.m in Sources */,
 				DEE02DA81581C98000198CA3 /* FailedBankDatabase.m in Sources */,
+				DED91C2B1581D2DC00590D37 /* FailedBanksListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
