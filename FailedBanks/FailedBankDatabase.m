@@ -48,15 +48,18 @@ static FailedBankDatabase *_database;
     if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil) 
         == SQLITE_OK) {
         while (sqlite3_step(statement) == SQLITE_ROW) {
-            int uniqueId = sqlite3_column_int(statement, 0);
+            int aUniqueId = sqlite3_column_int(statement, 0);
             char *nameChars = (char *) sqlite3_column_text(statement, 1);
             char *cityChars = (char *) sqlite3_column_text(statement, 2);
             char *stateChars = (char *) sqlite3_column_text(statement, 3);
-            NSString *name = [[NSString alloc] initWithUTF8String:nameChars];
-            NSString *city = [[NSString alloc] initWithUTF8String:cityChars];
-            NSString *state = [[NSString alloc] initWithUTF8String:stateChars];
+            NSString *aName = [[NSString alloc] initWithUTF8String:nameChars];
+            NSString *aCity = [[NSString alloc] initWithUTF8String:cityChars];
+            NSString *aState = [[NSString alloc] initWithUTF8String:stateChars];
             FailedBankInfo *failedBankInfo = [[FailedBankInfo alloc] 
-                                    initWithUniqueId:uniqueId name:name city:city state:state];                        
+                                    initWithUniqueId:aUniqueId
+                                              name:aName
+                                              city:aCity
+                                              state:aState];                        
             [retval addObject:failedBankInfo];
         }
         sqlite3_finalize(statement);
@@ -71,36 +74,37 @@ static FailedBankDatabase *_database;
 
 - (FailedBankDetails *)failedBankDetails:(int)uniqueId {
     FailedBankDetails *retval = nil;
-    NSString *query = [NSString stringWithFormat:@"SELECT id, name, city, state, zip, closing_date, updated_date FROM failed_banks WHERE id=%d", uniqueId];
+    
+    NSString *query = [NSString stringWithFormat:@"SELECT id, bank_name, city, state, cert_number, closing_date, updated_date FROM failed_banks WHERE id=%d", uniqueId];
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil) == SQLITE_OK) {
         while (sqlite3_step(statement) == SQLITE_ROW) {
-            int uniqueId = sqlite3_column_int(statement, 0);
+            int aUniqueId = sqlite3_column_int(statement, 0);
             char *nameChars = (char *) sqlite3_column_text(statement, 1);
             char *cityChars = (char *) sqlite3_column_text(statement, 2);
             char *stateChars = (char *) sqlite3_column_text(statement, 3);
-            int zip = sqlite3_column_int(statement, 4);          
+            int aCertNumber = sqlite3_column_int(statement, 4);          
             char *Chars = (char *) sqlite3_column_text(statement, 5);
             char *updatedDateChars = (char *) sqlite3_column_text(statement, 6);
-            NSString *name = [[NSString alloc] initWithUTF8String:nameChars];
-            NSString *city = [[NSString alloc] initWithUTF8String:cityChars];
-            NSString *state = [[NSString alloc] initWithUTF8String:stateChars];
+            NSString *aName = [[NSString alloc] initWithUTF8String:nameChars];
+            NSString *aCity = [[NSString alloc] initWithUTF8String:cityChars];
+            NSString *aState = [[NSString alloc] initWithUTF8String:stateChars];
             NSString *String =
             [[NSString alloc] initWithUTF8String:Chars];
             NSString *updatedDateString = 
             [[NSString alloc] initWithUTF8String:updatedDateChars];            
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
-            NSDate *closingDate = [formatter dateFromString:String];
-            NSDate *updateDate = [formatter dateFromString:updatedDateString];
+            NSDate *aClosingDate = [formatter dateFromString:String];
+            NSDate *anUpdateDate = [formatter dateFromString:updatedDateString];
             
-            retval = [[FailedBankDetails alloc] initWithUniqueId:uniqueId
-                                                            name:name 
-                                                            city:city
-                                                           state:state
-                                                             zip:zip
-                                                     closingDate:closingDate 
-                                                     updatedDate:updateDate];
+            retval = [[FailedBankDetails alloc] initWithUniqueId:aUniqueId
+                                                            name:aName 
+                                                            city:aCity
+                                                           state:aState
+                                                             certNumber:aCertNumber
+                                                     closingDate:aClosingDate 
+                                                     updatedDate:anUpdateDate];
             break;            
         }
         sqlite3_finalize(statement);
