@@ -9,6 +9,7 @@
 #import "FailedBanksListViewController.h"
 #import "FailedBankDatabase.h"
 #import "FailedBankInfo.h"
+#import "FailedBanksDetailViewController.h"
 
 @interface FailedBanksListViewController ()
 
@@ -16,7 +17,8 @@
 
 @implementation FailedBanksListViewController
 
-@synthesize failedBankInfos = _failedBankInfos;
+@synthesize failedBankInfos;
+@synthesize details;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -40,10 +42,12 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    self.details = nil;
 }
 
 - (void)dealloc {
     self.failedBankInfos = nil;
+    self.details = nil;
 }
 
 
@@ -61,7 +65,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_failedBankInfos count];
+    return [self.failedBankInfos count];
 }
 
 
@@ -78,64 +82,23 @@
     }
     
     // Set up the cell...
-    FailedBankInfo *info = [_failedBankInfos objectAtIndex:indexPath.row];
+    FailedBankInfo *info = [self.failedBankInfos objectAtIndex:indexPath.row];
     cell.textLabel.text = info.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", 
                                  info.city, info.state];
-    
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.details == nil) {
+        self.details = [[FailedBanksDetailViewController alloc] initWithNibName:@"FailedBanksDetailViewController" bundle:nil];        
+    }
+    FailedBankInfo *info = [self.failedBankInfos objectAtIndex:indexPath.row];
+    self.details.uniqueId = info.uniqueId;
+    [self.navigationController pushViewController:self.details animated:YES];
 }
 
 @end
