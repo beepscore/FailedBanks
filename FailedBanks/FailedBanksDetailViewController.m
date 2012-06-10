@@ -16,13 +16,13 @@
 
 @implementation FailedBanksDetailViewController
 
-@synthesize nameLabel = _nameLabel;
-@synthesize cityLabel = _cityLabel;
-@synthesize stateLabel = _stateLabel;
-@synthesize zipLabel = _zipLabel;
-@synthesize closingDateLabel = _closingDateLabel;
-@synthesize updatedLabel = _updatedLabel;
-@synthesize uniqueId = _uniqueId;
+@synthesize nameLabel;
+@synthesize cityLabel;
+@synthesize stateLabel;
+@synthesize certNumberLabel;
+@synthesize closingDateLabel;
+@synthesize updatedLabel;
+@synthesize uniqueId;
 
 - (id)init
 {
@@ -31,6 +31,8 @@
     }
     return self;
 }
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -48,16 +50,16 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     FailedBankDetails *details = [[FailedBankDatabase database] 
-                                  failedBankDetails:_uniqueId];
+                                  failedBankDetails:self.uniqueId];
     if (details != nil) {
-        [_nameLabel setText:details.name];
-        [_cityLabel setText:details.city];
-        [_stateLabel setText:details.state];
-        [_zipLabel setText:[NSString stringWithFormat:@"%d", details.name]];
+        [self.nameLabel setText:details.name];
+        [self.cityLabel setText:details.city];
+        [self.stateLabel setText:details.state];
+        [self.certNumberLabel setText:[NSString stringWithFormat:@"%d", details.certNumber]];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"MMMM dd, yyyy"];
-        [_closingDateLabel setText:[formatter stringFromDate:details.closingDate]];
-        [_updatedLabel setText:[formatter stringFromDate:details.updatedDate]];        
+        [self.closingDateLabel setText:[formatter stringFromDate:details.closingDate]];
+        [self.updatedLabel setText:[formatter stringFromDate:details.updatedDate]];        
     }
 }
 
@@ -69,7 +71,7 @@
     self.nameLabel = nil;
     self.cityLabel = nil;
     self.stateLabel = nil;
-    self.zipLabel = nil;
+    self.certNumberLabel = nil;
     self.closingDateLabel = nil;
     self.updatedLabel = nil;
 }
@@ -78,7 +80,7 @@
     self.nameLabel = nil;
     self.cityLabel = nil;
     self.stateLabel = nil;
-    self.zipLabel = nil;
+    self.certNumberLabel = nil;
     self.closingDateLabel = nil;
     self.updatedLabel = nil;
 }

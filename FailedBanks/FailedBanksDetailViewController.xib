@@ -198,7 +198,7 @@
 					<object class="IBUILabel" id="193391323">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 196}, {51, 21}}</string>
+						<string key="NSFrame">{{20, 246}, {103, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="501536570"/>
@@ -211,7 +211,7 @@
 							<integer value="320" key="IBUIAccessibilityTraits"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Zip:</string>
+						<string key="IBUIText">Cert Number:</string>
 						<reference key="IBUITextColor" ref="944233134"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -222,7 +222,7 @@
 					<object class="IBUILabel" id="501536570">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{131, 196}, {167, 21}}</string>
+						<string key="NSFrame">{{131, 246}, {167, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="212805448"/>
@@ -410,11 +410,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">zipLabel</string>
+						<string key="label">certNumberLabel</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="501536570"/>
 					</object>
-					<int key="connectionID">21</int>
+					<int key="connectionID">22</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -540,7 +540,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">21</int>
+			<int key="maxID">22</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -548,14 +548,18 @@
 					<string key="className">FailedBanksDetailViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="certNumberLabel">UILabel</string>
 						<string key="cityLabel">UILabel</string>
 						<string key="closingDateLabel">UILabel</string>
 						<string key="nameLabel">UILabel</string>
 						<string key="stateLabel">UILabel</string>
 						<string key="updatedLabel">UILabel</string>
-						<string key="zipLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="certNumberLabel">
+							<string key="name">certNumberLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="cityLabel">
 							<string key="name">cityLabel</string>
 							<string key="candidateClassName">UILabel</string>
@@ -574,10 +578,6 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="updatedLabel">
 							<string key="name">updatedLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="zipLabel">
-							<string key="name">zipLabel</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>
