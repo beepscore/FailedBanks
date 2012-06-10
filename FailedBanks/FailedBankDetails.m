@@ -9,32 +9,35 @@
 #import "FailedBankDetails.h"
 
 @implementation FailedBankDetails
-@synthesize uniqueId = _uniqueId;
-@synthesize name = _name;
-@synthesize city = _city;
-@synthesize state = _state;
-@synthesize zip = _zip;
-@synthesize closingDate = _closingDate;
-@synthesize updatedDate = _updatedDate;
 
-- (id)initWithUniqueId:(int)uniqueId name:(NSString *)name 
-                  city:(NSString *)city 
-                 state:(NSString *)state 
-                   zip:(int)zip 
-           closingDate:(NSDate *)closingDate 
-           updatedDate:(NSDate *)updatedDate {
+@synthesize uniqueId;
+@synthesize name;
+@synthesize city;
+@synthesize state;
+@synthesize certNumber;
+@synthesize closingDate;
+@synthesize updatedDate;
+
+- (id)initWithUniqueId:(int)aUniqueId 
+                  name:(NSString *)aName 
+                  city:(NSString *)aCity 
+                 state:(NSString *)aState 
+                   certNumber:(int)aCertNumber
+           closingDate:(NSDate *)aClosingDate 
+           updatedDate:(NSDate *)anUpdatedDate {
     
     if ((self = [super init])) {
-        self.uniqueId = uniqueId;
-        self.name = name;
-        self.city = city;
-        self.state = state;
-        self.zip = zip;
-        self.closingDate = closingDate;
-        self.updatedDate = updatedDate;
+        self.uniqueId = aUniqueId;
+        self.name = aName;
+        self.city = aCity;
+        self.state = aState;
+        self.certNumber = aCertNumber;
+        self.closingDate = aClosingDate;
+        self.updatedDate = anUpdatedDate;
     }
     return self;
 }
+
 
 - (void) dealloc
 {
@@ -43,6 +46,11 @@
     self.state = nil;
     self.closingDate = nil;
     self.updatedDate = nil;
+}
+
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"uniqueID: %d city %@ : %@ state: %@/nCert Number: %d Closing Date: %@ Updated Date:%@\n", self.uniqueId, self.city, self.state, self.certNumber, self.closingDate, self.updatedDate];
 }
 
 @end
