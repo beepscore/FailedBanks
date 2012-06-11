@@ -1,20 +1,20 @@
 //
-//  FailedBanksDetailViewController.m
+//  FailedBankDetailViewController.m
 //  FailedBanks
 //
 //  Created by Steve Baker on 6/10/12.
 //  Copyright (c) 2012 Beepscore LLC. All rights reserved.
 //
 
-#import "FailedBanksDetailViewController.h"
+#import "FailedBankDetailViewController.h"
 #import "FailedBankDatabase.h"
 #import "FailedBankDetails.h"
 
-@interface FailedBanksDetailViewController ()
+@interface FailedBankDetailViewController ()
 
 @end
 
-@implementation FailedBanksDetailViewController
+@implementation FailedBankDetailViewController
 
 @synthesize nameLabel;
 @synthesize cityLabel;

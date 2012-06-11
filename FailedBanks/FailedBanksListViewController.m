@@ -9,7 +9,7 @@
 #import "FailedBanksListViewController.h"
 #import "FailedBankDatabase.h"
 #import "FailedBankInfo.h"
-#import "FailedBanksDetailViewController.h"
+#import "FailedBankDetailViewController.h"
 
 @interface FailedBanksListViewController ()
 
@@ -94,8 +94,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.failedBankDetailViewController == nil) {
-        self.failedBankDetailViewController = [[FailedBanksDetailViewController alloc] 
-                        initWithNibName:@"FailedBanksDetailViewController" 
+        self.failedBankDetailViewController = [[FailedBankDetailViewController alloc] 
+                        initWithNibName:@"FailedBankDetailViewController" 
                         bundle:nil];        
     }
     FailedBankInfo *info = [self.failedBankInfos objectAtIndex:indexPath.row];

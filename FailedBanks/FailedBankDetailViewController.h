@@ -1,5 +1,5 @@
 //
-//  FailedBanksDetailViewController.h
+//  FailedBankDetailViewController.h
 //  FailedBanks
 //
 //  Created by Steve Baker on 6/10/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FailedBanksDetailViewController : UIViewController {
+@interface FailedBankDetailViewController : UIViewController {
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *nameLabel;
