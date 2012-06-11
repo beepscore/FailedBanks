@@ -14,6 +14,6 @@
 
 @property (nonatomic, retain) NSArray *failedBankInfos;
 
-@property (nonatomic, retain) FailedBanksDetailViewController *details;
+@property (nonatomic, retain) FailedBanksDetailViewController *failedBankDetailViewController;
 
 @end

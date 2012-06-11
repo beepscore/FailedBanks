@@ -18,7 +18,7 @@
 @implementation FailedBanksListViewController
 
 @synthesize failedBankInfos;
-@synthesize details;
+@synthesize failedBankDetailViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,12 +42,12 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    self.details = nil;
+    self.failedBankDetailViewController = nil;
 }
 
 - (void)dealloc {
     self.failedBankInfos = nil;
-    self.details = nil;
+    self.failedBankDetailViewController = nil;
 }
 
 
@@ -93,12 +93,14 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.details == nil) {
-        self.details = [[FailedBanksDetailViewController alloc] initWithNibName:@"FailedBanksDetailViewController" bundle:nil];        
+    if (self.failedBankDetailViewController == nil) {
+        self.failedBankDetailViewController = [[FailedBanksDetailViewController alloc] 
+                        initWithNibName:@"FailedBanksDetailViewController" 
+                        bundle:nil];        
     }
     FailedBankInfo *info = [self.failedBankInfos objectAtIndex:indexPath.row];
-    self.details.uniqueId = info.uniqueId;
-    [self.navigationController pushViewController:self.details animated:YES];
+    self.failedBankDetailViewController.uniqueId = info.uniqueId;
+    [self.navigationController pushViewController:self.failedBankDetailViewController animated:YES];
 }
 
 @end
