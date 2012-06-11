@@ -10,20 +10,20 @@
 
 @implementation FailedBankInfo
 
-@synthesize uniqueId = _uniqueId;
-@synthesize name = _name;
-@synthesize city = _city;
-@synthesize state = _state;
+@synthesize uniqueId;
+@synthesize name;
+@synthesize city;
+@synthesize state;
 
-- (id)initWithUniqueId:(int)uniqueId 
-                  name:(NSString *)name 
-                  city:(NSString *)city 
-                 state:(NSString *)state {
+- (id)initWithUniqueId:(int)aUniqueId 
+                  name:(NSString *)aName 
+                  city:(NSString *)aCity 
+                 state:(NSString *)aState {
     if ((self = [super init])) {
-        self.uniqueId = uniqueId;
-        self.name = name;
-        self.city = city;
-        self.state = state;
+        self.uniqueId = aUniqueId;
+        self.name = aName;
+        self.city = aCity;
+        self.state = aState;
     }
     return self;
 }
