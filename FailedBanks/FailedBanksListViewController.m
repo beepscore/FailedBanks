@@ -82,10 +82,10 @@
     }
     
     // Set up the cell...
-    FailedBankInfo *info = [self.failedBankInfos objectAtIndex:indexPath.row];
-    cell.textLabel.text = info.name;
+    FailedBankInfo *failedBankInfo = [self.failedBankInfos objectAtIndex:indexPath.row];
+    cell.textLabel.text = failedBankInfo.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", 
-                                 info.city, info.state];
+                                 failedBankInfo.city, failedBankInfo.state];
     return cell;
 }
 
@@ -98,8 +98,8 @@
                         initWithNibName:@"FailedBankDetailViewController" 
                         bundle:nil];        
     }
-    FailedBankInfo *info = [self.failedBankInfos objectAtIndex:indexPath.row];
-    self.failedBankDetailViewController.uniqueId = info.uniqueId;
+    FailedBankInfo *failedBankInfo = [self.failedBankInfos objectAtIndex:indexPath.row];
+    self.failedBankDetailViewController.uniqueId = failedBankInfo.uniqueId;
     [self.navigationController pushViewController:self.failedBankDetailViewController animated:YES];
 }
 
