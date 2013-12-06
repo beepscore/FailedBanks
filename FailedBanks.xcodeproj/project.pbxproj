@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE1D2314185290AE00C833AD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1D2313185290AE00C833AD /* Default-568h@2x.png */; };
 		DE2180FA1581C29A002BE9CA /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2180F91581C29A002BE9CA /* FailedBankInfo.m */; };
 		DE4A8D2B1580799600B0E35D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4A8D2A1580799600B0E35D /* UIKit.framework */; };
 		DE4A8D2D1580799600B0E35D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4A8D2C1580799600B0E35D /* Foundation.framework */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE1D2313185290AE00C833AD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DE2180F81581C29A002BE9CA /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
 		DE2180F91581C29A002BE9CA /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
 		DE4A8D261580799600B0E35D /* FailedBanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FailedBanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 		DE4A8D1B1580799600B0E35D = {
 			isa = PBXGroup;
 			children = (
+				DE1D2313185290AE00C833AD /* Default-568h@2x.png */,
 				DE666F411580923400F76DA1 /* banklist */,
 				DE4A8D301580799600B0E35D /* FailedBanks */,
 				DE4A8D481580799700B0E35D /* FailedBanksTests */,
@@ -263,6 +266,7 @@
 				DE4A8D351580799600B0E35D /* InfoPlist.strings in Resources */,
 				DE666F421580923400F76DA1 /* banklist in Resources */,
 				DE70E2CC1581DF1F00554660 /* banklist.sqlite3 in Resources */,
+				DE1D2314185290AE00C833AD /* Default-568h@2x.png in Resources */,
 				DECC23A115854AD400D4B259 /* FailedBankDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -401,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
