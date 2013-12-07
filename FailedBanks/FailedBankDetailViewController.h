@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FailedBankDetailViewController : UIViewController {
-}
+@interface FailedBankDetailViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *cityLabel;

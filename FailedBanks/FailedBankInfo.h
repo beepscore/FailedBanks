@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FailedBankInfo : NSObject {
-}
+@interface FailedBankInfo : NSObject
 
 @property (nonatomic, assign) int uniqueId;
 @property (nonatomic, copy) NSString *name;
