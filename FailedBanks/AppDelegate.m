@@ -16,19 +16,6 @@
 - (BOOL)application:(UIApplication *)application 
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-    FailedBanksListViewController *failedBanksListViewController = 
-    [[FailedBanksListViewController alloc] initWithNibName:nil bundle:nil];
-    
-    self.navController = [[UINavigationController alloc] 
-                        initWithRootViewController:failedBanksListViewController];
-    self.window.backgroundColor = [UIColor whiteColor];
-    // http://stackoverflow.com/questions/8706828/application-windows-are-expected-to-have-a-root-view-controller-at-the-end-of-a
-    self.window.rootViewController = self.navController;
-    
-    [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
@@ -57,10 +44,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (void) dealloc {
-    self.navController = nil;    
 }
 
 @end

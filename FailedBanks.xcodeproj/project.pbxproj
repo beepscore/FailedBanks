@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE1D2314185290AE00C833AD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1D2313185290AE00C833AD /* Default-568h@2x.png */; };
+		DE1EEFE11852D59600EF54F9 /* MainStoryboardIphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1EEFE01852D59600EF54F9 /* MainStoryboardIphone.storyboard */; };
 		DE2180FA1581C29A002BE9CA /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2180F91581C29A002BE9CA /* FailedBankInfo.m */; };
 		DE4A8D2B1580799600B0E35D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4A8D2A1580799600B0E35D /* UIKit.framework */; };
 		DE4A8D2D1580799600B0E35D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4A8D2C1580799600B0E35D /* Foundation.framework */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		DE1D2313185290AE00C833AD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DE1EEFE01852D59600EF54F9 /* MainStoryboardIphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboardIphone.storyboard; path = en.lproj/MainStoryboardIphone.storyboard; sourceTree = "<group>"; };
 		DE2180F81581C29A002BE9CA /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
 		DE2180F91581C29A002BE9CA /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
 		DE4A8D261580799600B0E35D /* FailedBanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FailedBanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 				DE97966A1581DEBB00C54AF1 /* Resources */,
 				DE4A8D391580799600B0E35D /* AppDelegate.h */,
 				DE4A8D3A1580799600B0E35D /* AppDelegate.m */,
+				DE1EEFE01852D59600EF54F9 /* MainStoryboardIphone.storyboard */,
 				DE4A8D311580799600B0E35D /* Supporting Files */,
 				DEE02DA61581C98000198CA3 /* FailedBankDatabase.h */,
 				DEE02DA71581C98000198CA3 /* FailedBankDatabase.m */,
@@ -266,6 +269,7 @@
 				DE4A8D351580799600B0E35D /* InfoPlist.strings in Resources */,
 				DE666F421580923400F76DA1 /* banklist in Resources */,
 				DE70E2CC1581DF1F00554660 /* banklist.sqlite3 in Resources */,
+				DE1EEFE11852D59600EF54F9 /* MainStoryboardIphone.storyboard in Resources */,
 				DE1D2314185290AE00C833AD /* Default-568h@2x.png in Resources */,
 				DECC23A115854AD400D4B259 /* FailedBankDetailViewController.xib in Resources */,
 			);
