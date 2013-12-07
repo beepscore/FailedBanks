@@ -16,14 +16,6 @@
 
 @implementation FailedBankDetailViewController
 
-@synthesize nameLabel;
-@synthesize cityLabel;
-@synthesize stateLabel;
-@synthesize certNumberLabel;
-@synthesize closingDateLabel;
-@synthesize updatedLabel;
-@synthesize uniqueId;
-
 - (id)init
 {
     self = [super init];
