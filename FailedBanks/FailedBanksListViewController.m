@@ -42,9 +42,7 @@
 
 - (void)dealloc {
     self.failedBankInfos = nil;
-    //self.failedBankDetailViewController = nil;
 }
-
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
