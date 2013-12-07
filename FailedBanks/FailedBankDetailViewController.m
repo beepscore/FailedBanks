@@ -68,16 +68,6 @@
     self.updatedLabel = nil;
 }
 
-- (void) dealloc {
-    self.nameLabel = nil;
-    self.cityLabel = nil;
-    self.stateLabel = nil;
-    self.certNumberLabel = nil;
-    self.closingDateLabel = nil;
-    self.updatedLabel = nil;
-}
-
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
