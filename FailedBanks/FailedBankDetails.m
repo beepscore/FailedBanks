@@ -50,7 +50,8 @@
 
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"uniqueID: %d city %@ : %@ state: %@/nCert Number: %d Closing Date: %@ Updated Date:%@\n", self.uniqueId, self.city, self.state, self.certNumber, self.closingDate, self.updatedDate];
+    return [NSString stringWithFormat:@"uniqueID: %d city: %@ state: %@/nCert Number: %d Closing Date: %@ Updated Date:%@\n", self.uniqueId, self.city, self.state,
+        self.certNumber, self.closingDate, self.updatedDate];
 }
 
 @end
