@@ -27,9 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.failedBankInfos = [FailedBankDatabase database].failedBankInfos;
-    self.title = @"Failed Banks";
 }
-
 
 - (void)viewDidUnload
 {
