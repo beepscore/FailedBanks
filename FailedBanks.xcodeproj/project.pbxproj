@@ -26,7 +26,6 @@
 		DE70E2CC1581DF1F00554660 /* banklist.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = DE70E2CB1581DF1F00554660 /* banklist.sqlite3 */; };
 		DEB99C96158334B600BD3DD4 /* FailedBankDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB99C95158334B600BD3DD4 /* FailedBankDetails.m */; };
 		DECC23A015854AD400D4B259 /* FailedBankDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DECC239E15854AD400D4B259 /* FailedBankDetailViewController.m */; };
-		DECC23A115854AD400D4B259 /* FailedBankDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DECC239F15854AD400D4B259 /* FailedBankDetailViewController.xib */; };
 		DED91C2B1581D2DC00590D37 /* FailedBanksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED91C2A1581D2DC00590D37 /* FailedBanksListViewController.m */; };
 		DEE02DA81581C98000198CA3 /* FailedBankDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE02DA71581C98000198CA3 /* FailedBankDatabase.m */; };
 /* End PBXBuildFile section */
@@ -69,7 +68,6 @@
 		DEB99C95158334B600BD3DD4 /* FailedBankDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDetails.m; sourceTree = "<group>"; };
 		DECC239D15854AD400D4B259 /* FailedBankDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankDetailViewController.h; sourceTree = "<group>"; };
 		DECC239E15854AD400D4B259 /* FailedBankDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDetailViewController.m; sourceTree = "<group>"; };
-		DECC239F15854AD400D4B259 /* FailedBankDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FailedBankDetailViewController.xib; sourceTree = "<group>"; };
 		DED91C291581D2DC00590D37 /* FailedBanksListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBanksListViewController.h; sourceTree = "<group>"; };
 		DED91C2A1581D2DC00590D37 /* FailedBanksListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBanksListViewController.m; sourceTree = "<group>"; };
 		DEE02DA61581C98000198CA3 /* FailedBankDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankDatabase.h; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				DEB99C95158334B600BD3DD4 /* FailedBankDetails.m */,
 				DECC239D15854AD400D4B259 /* FailedBankDetailViewController.h */,
 				DECC239E15854AD400D4B259 /* FailedBankDetailViewController.m */,
-				DECC239F15854AD400D4B259 /* FailedBankDetailViewController.xib */,
 				DE2180F81581C29A002BE9CA /* FailedBankInfo.h */,
 				DE2180F91581C29A002BE9CA /* FailedBankInfo.m */,
 				DED91C291581D2DC00590D37 /* FailedBanksListViewController.h */,
@@ -271,7 +268,6 @@
 				DE70E2CC1581DF1F00554660 /* banklist.sqlite3 in Resources */,
 				DE1EEFE11852D59600EF54F9 /* MainStoryboardIphone.storyboard in Resources */,
 				DE1D2314185290AE00C833AD /* Default-568h@2x.png in Resources */,
-				DECC23A115854AD400D4B259 /* FailedBankDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

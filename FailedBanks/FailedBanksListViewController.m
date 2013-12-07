@@ -9,7 +9,6 @@
 #import "FailedBanksListViewController.h"
 #import "FailedBankDatabase.h"
 #import "FailedBankInfo.h"
-#import "FailedBankDetailViewController.h"
 
 @interface FailedBanksListViewController ()
 
@@ -18,7 +17,6 @@
 @implementation FailedBanksListViewController
 
 @synthesize failedBankInfos;
-@synthesize failedBankDetailViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,12 +40,11 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    self.failedBankDetailViewController = nil;
 }
 
 - (void)dealloc {
     self.failedBankInfos = nil;
-    self.failedBankDetailViewController = nil;
+    //self.failedBankDetailViewController = nil;
 }
 
 
@@ -91,16 +88,16 @@
 
 
 #pragma mark - Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.failedBankDetailViewController == nil) {
-        self.failedBankDetailViewController = [[FailedBankDetailViewController alloc] 
-                        initWithNibName:@"FailedBankDetailViewController" 
-                        bundle:nil];        
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        FailedBankInfo *failedBankInfo = [self.failedBankInfos objectAtIndex:indexPath.row];
+        [[segue destinationViewController] setUniqueId:failedBankInfo.uniqueId];
     }
-    FailedBankInfo *failedBankInfo = [self.failedBankInfos objectAtIndex:indexPath.row];
-    self.failedBankDetailViewController.uniqueId = failedBankInfo.uniqueId;
-    [self.navigationController pushViewController:self.failedBankDetailViewController animated:YES];
 }
 
 @end
