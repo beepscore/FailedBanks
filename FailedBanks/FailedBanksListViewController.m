@@ -11,7 +11,6 @@
 #import "FailedBankInfo.h"
 
 @interface FailedBanksListViewController ()
-
 @end
 
 @implementation FailedBanksListViewController
@@ -26,7 +25,6 @@
     }
     return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -85,7 +83,6 @@
                                  failedBankInfo.city, failedBankInfo.state];
     return cell;
 }
-
 
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
