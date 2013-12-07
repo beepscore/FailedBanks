@@ -10,14 +10,6 @@
 
 @implementation FailedBankDetails
 
-@synthesize uniqueId;
-@synthesize name;
-@synthesize city;
-@synthesize state;
-@synthesize certNumber;
-@synthesize closingDate;
-@synthesize updatedDate;
-
 - (id)initWithUniqueId:(int)aUniqueId 
                   name:(NSString *)aName 
                   city:(NSString *)aCity 
