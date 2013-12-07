@@ -11,7 +11,12 @@
 #import "FailedBankDetails.h"
 
 @interface FailedBankDetailViewController ()
-
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *cityLabel;
+@property (nonatomic, weak) IBOutlet UILabel *stateLabel;
+@property (nonatomic, weak) IBOutlet UILabel *certNumberLabel;
+@property (nonatomic, weak) IBOutlet UILabel *closingDateLabel;
+@property (nonatomic, weak) IBOutlet UILabel *updatedLabel;
 @end
 
 @implementation FailedBankDetailViewController
