@@ -15,8 +15,6 @@
 
 @implementation FailedBanksListViewController
 
-@synthesize failedBankInfos;
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
